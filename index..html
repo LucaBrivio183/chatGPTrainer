@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Grotesk:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- local style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <title>GPTrainer</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>GPTrainer</h1>
+        <p class="subtitle">your AI home workout partner</p>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h2>WICH MUSCLE YOU WANNA WORK?</h2>
+        <div class="muscles">
+          <!-- abdomen -->
+          <div class="muscle" data-muscle="abdomen">
+            <img src="./image/abdomen.png" alt="abdomen" />
+          </div>
+          <!-- biceps -->
+          <div class="muscle" data-muscle="biceps">
+            <img src="./image/biceps.png" alt="biceps" />
+          </div>
+          <!-- calves -->
+          <div class="muscle" data-muscle="calves">
+            <img src="./image/calves.png" alt="calves" />
+          </div>
+          <!-- chest -->
+          <div class="muscle" data-muscle="chest">
+            <img src="./image/chest.png" alt="chest" />
+          </div>
+          <!-- dorsalis -->
+          <div class="muscle" data-muscle="dorsalis">
+            <img src="./image/dorsalis.png" alt="dorsalis" />
+          </div>
+          <!-- quadriceps -->
+          <div class="muscle" data-muscle="quadriceps">
+            <img src="./image/quadriceps.png" alt="quadriceps" />
+          </div>
+          <!-- shoulders -->
+          <div class="muscle" data-muscle="shoulders">
+            <img src="./image/shoulders.png" alt="shoulders" />
+          </div>
+          <!-- trapezius -->
+          <div class="muscle" data-muscle="trapezius">
+            <img src="./image/trapezius.png" alt="trapezius" />
+          </div>
+          <!-- triceps -->
+          <div class="muscle" data-muscle="triceps">
+            <img src="./image/triceps.png" alt="triceps" />
+          </div>
+        </div>
+
+        <!-- modal -->
+        <div class="modal hidden">
+          <div class="modal-box">
+            <div class="modal-close">
+              <img src="./image/close-button.svg" alt="close" />
+            </div>
+            <div class="modal-image"></div>
+            <div class="modal-content"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- loader -->
+    <div class="loader hidden">
+      <img src="image/abdomen.png" id="muscle-image" />
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

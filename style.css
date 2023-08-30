@@ -1,0 +1,231 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/****************
+color
+****************/
+
+:root {
+  --primary-color: #3d2a21;
+  --secondary-color: #7f9fa3;
+  --tertiary-color: #121c1f;
+  --primary-text-color: #261c16;
+  --secondary-text-color: #cacbcb;
+}
+/****************
+typo
+****************/
+body {
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--secondary-color);
+}
+
+h1 {
+  font-size: clamp(24px, 3vw, 32px);
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: clamp(20px, 2.5vw, 30px);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: clamp(16px, 2vw, 28px);
+  padding: 0.3125rem 0;
+  text-align: center;
+}
+
+/****************
+COMMON
+****************/
+.container {
+  width: clamp(200px, 70%, 700px);
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+img {
+  max-width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+/****************
+header
+****************/
+
+header {
+  color: var(--primary-text-color);
+  text-align: right;
+  background: var(--secondary-color) url(./image/header-bg.png) no-repeat top
+    left;
+  background-size: cover;
+}
+
+.subtitle {
+  font-size: clamp(14px, 1vw, 20px);
+  padding: 0.875rem 0;
+}
+
+/****************
+main
+****************/
+
+main {
+  background-color: var(--secondary-color);
+  padding: 40px 0;
+}
+
+.muscles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.muscle {
+  flex: 0 0 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--tertiary-color);
+  border-radius: 10px;
+  background-color: var(--secondary-text-color);
+  cursor: pointer;
+}
+
+.muscle:hover {
+  scale: 1.2;
+}
+
+.workout {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--tertiary-color);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.workout-slot {
+  width: 100%;
+  padding: 12px;
+  font-size: 46px;
+  font-weight: 700;
+  color: var(--primary-text-color);
+  background-color: var(--secondary-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workout-slot:nth-child(2) {
+  border-right: 2px solid var(--tertiary-color);
+  border-left: 2px solid var(--tertiary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  display: block;
+  padding: 12px 24px;
+  margin: 20px auto;
+  color: var(--secondary-text-color);
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+}
+
+/****************
+modal
+****************/
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7f9fa370;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.modal-box {
+  position: relative;
+  width: max(50%, 600px);
+  margin: 24px auto;
+  background-color: var(--secondary-text-color);
+  border: 2px solid var(--primary-text-color);
+  animation: pop-effect 0.3s ease-out;
+}
+
+.modal-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 250px;
+}
+
+.modal-image img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.modal-content {
+  padding: 16px;
+  text-align: left;
+}
+
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  height: 36px;
+  width: 36px;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--primary-text-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/****************
+loader
+****************/
+
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  padding: 24px;
+  background-color: #7f9fa3;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader img {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  width: 30%;
+}
